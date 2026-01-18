@@ -7,6 +7,10 @@
 [Project: Forecasting Demand / Sales for a Bookshop](/sample_page)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
+[Project: Forecasting Demand / Sales for a Bookshop](/sample_page)
+<img src="images/TimeSeries.png?raw=true"/>
+
+
 ---
 
 ### Applying NLP to solve Business Problems
