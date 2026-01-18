@@ -5,8 +5,9 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br><br>
   Master of Business Administration (MBA, Manchester, UK) 
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
-  
+  <a href="https://www.linkedin.com/in/david-romero-pina/">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/david-romero-pina/">Tableau</a>  
+
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
