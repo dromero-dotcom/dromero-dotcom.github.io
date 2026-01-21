@@ -8,25 +8,25 @@
 
 A dataset of about 19,500 readings was used to track various features of the engine activity: engine RPMs, oil temperature and pressure, fuel pressure, etc. Each on its own does not point to an anomaly, but combinations of several abnormal readings might suggest potential issues. Histograms and boxplots of each feature helped to identify the distribution of the data and potential outliers. 
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+<img src="images/proj1/histograms2.png?raw=true"/>
+<img src="images/proj1/boxplots.png?raw=true"/>
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+---
 
-### 2. Assess assumptions on which statistical inference will be based
+### 2. Methodology
 
-```javascript
-if (isAwesome){
-  return true
-}
-```
+A dataset of about 19,500 readings was used to track various features of the engine activity: engine RPMs, oil temperature and pressure, fuel pressure, etc. Each on its own does not point to an anomaly, but combinations of 
 
-### 3. Support the selection of appropriate statistical tools and techniques
+<img src="images/proj1/3_scatterplots_comparison.png?raw=true"/>
 
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+---
+
+### 3. Results and Recommendations
+
+Outcome: number of anomalies (outliers) common to all 3 methods, summarised in this table:
+
+<img src="images/proj1/Anomalies.png?raw=true"/>
+
 
 ### 4. Provide a basis for further data collection through surveys or experiments
 
