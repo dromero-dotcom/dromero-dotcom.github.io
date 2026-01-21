@@ -26,8 +26,8 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 
-[Project: Anomaly detection of a Ship's Engine (preventive maintenance)](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Project: Anomaly detection of a Ship's Engine (preventive maintenance)](/proj_1_ShipEngine)
+<img src="images/proj1/cargoship.png?raw=true"/>
 
 ---
 
