@@ -1,12 +1,14 @@
 title: David Romero # your name (or website title) here
 logo: "/images/ProfileFotoWeb2.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  MSC in Computer Science (Warwick, UK)
+  Data Science Career Accelerator (University of Cambridge, UK)
   <br><br>
-  Master of Business Administration (MBA, Manchester, UK) 
+  MSc in Computer Science (University of Warwick, UK)
+  <br><br>
+  Master of Business Administration, MBA (University of Manchester, UK) 
   <br><br>
   <a href="https://www.linkedin.com/in/david-romero-pina/">LinkedIn</a>
-  <a href="https://www.linkedin.com/in/david-romero-pina/">Tableau</a>  
+  <!-- <a href="https://www.linkedin.com/in/david-romero-pina/">Tableau</a> -->
 
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
