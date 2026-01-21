@@ -4,34 +4,29 @@
 
 ### Time Series Analysis and Forecasting
 
-[Project: Forecasting Demand / Sales for a Bookshop](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
-[Project: Forecasting Demand / Sales for a Bookshop](/sample_page)
-<img src="images/TimeSeries.png?raw=true"/>
-
+[Project: Forecasting Sales for a Bookshop](/proj4_BookshopFcst)
+<img src="images/proj4/sales_fcst.JPG?raw=true"/>
 
 ---
 
 ### Applying NLP to solve Business Problems
 
-[Project: Getting insights from Online Customer Reviews](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Project: Getting insights from Online Customer Reviews](/proj3_CustomerInsights)
+<img src="images/proj3/Gym.JPG?raw=true"/>
 
 ---
 
 ### Statistics and Fundamentals of Data Science
 
-[Project: Customer Segmentation for an e-Commerce Business](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Project: Customer Segmentation for an e-Commerce Business](/proj2_eCommSegmentation)
+<img src="images/proj2/eCommerce.JPG?raw=true"/>
 
+---
 
-[Project: Anomaly detection of a Ship's Engine (preventive maintenance)](/proj_1_ShipEngine)
+[Project: Detection of anomalous activity on a Ship's Engine](/proj1_ShipEngine)
 <img src="images/proj1/cargoship.JPG?raw=true"/>
 
 ---
 
 
 
-
-<!-- Remove above link if you don't want to attibute -->
