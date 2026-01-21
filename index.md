@@ -27,7 +27,7 @@
 
 
 [Project: Anomaly detection of a Ship's Engine (preventive maintenance)](/proj_1_ShipEngine)
-<img src="images/proj1/cargoship.png?raw=true"/>
+<img src="images/proj1/cargoship.JPG?raw=true"/>
 
 ---
 
