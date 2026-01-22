@@ -11,3 +11,5 @@ description: > # your text below (remove <br> elements if you don't need line br
   Master of Business Administration, MBA (Manchester) 
   <br><br>
   <a href="https://www.linkedin.com/in/david-romero-pina/">View my LinkedIn Profile</a>
+
+remote_theme: pages-themes/minimal@v0.2.0
