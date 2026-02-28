@@ -1,6 +1,6 @@
 ## PROJECT: Detecting anomalous activity of a ship's engine
 
-**Project description / Problem Statement:** A logistics company operates a fleet of ships. It needs an anomaly detection system for their shipping fleet to prevent engine failures. Current maintenance issues can cause safety risks, high costs, and delivery delays. By analyzing engine sensor data for early warnings, the goal is to implement proactive monitoring that ensures crew safety, reduces operational expenses, and protects revenue through timely corrective action.
+**Project description / Problem Statement:** A logistics company operates a fleet of ships. It needs an anomaly detection system for their fleet to prevent engine failures. Maintenance issues can cause safety risks, high costs, and delivery delays. By analyzing engine sensor data for early warnings, the goal is to implement proactive monitoring that ensures crew safety, reduces operational expenses, and protects revenue through timely corrective action.
 
 ---
 
@@ -28,14 +28,14 @@ Principal Component Analysis (PCA) was used to reduce the dimensionality of the 
 
 ### 3. Results and Recommendations
 
-Outcome: number of anomalies (outliers) common to all 3 methods, summarised in this table:
+The number of anomalies (outliers) common to all 3 methods, is summarised in the table underneath:
 
 <img src="images/proj1/Anomalies.png?raw=true"/>
 
 ✔ The IQR method seemed the most appropriate for this dataset, since it is straight forward to
 implement for a preliminary diagnostic of the Engine.
 
-✔ If if the Shipping company would prefer to fine-tune the analysis with smaller or larger proportions of samples, then Isolation Forest
+✔ If the Shipping company would prefer to fine-tune the analysis with smaller or larger proportions of samples, then Isolation Forest
 would be the recommendation (more flexible than IQR).
 
 ✔ The selection of Isolation Forest (I.F.) vs. OC-SVM was based on lower complexity to implement (parameter tuning) and
