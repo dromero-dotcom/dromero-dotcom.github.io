@@ -15,7 +15,12 @@ A dataset of about 19,500 readings was used to track various features of the eng
 
 ### 2. Methodology
 
-A dataset of about 19,500 readings was used to track various features of the engine activity: engine RPMs, oil temperature and pressure, fuel pressure, etc. Each on its own does not point to an anomaly, but combinations of 
+Three methods were used to pinpoint outliers:
+* Interquartile Range (IQR).
+* One-Class Support Vector Machine (OC-SVM).
+* Isolation Forest.
+
+Principal Component Analysis (PCA) was used to reduce the dimensionality of the dataset and plot the various data points in 2D.
 
 <img src="images/proj1/3_scatterplots_comparison.png?raw=true"/>
 
@@ -27,9 +32,12 @@ Outcome: number of anomalies (outliers) common to all 3 methods, summarised in t
 
 <img src="images/proj1/Anomalies.png?raw=true"/>
 
-
-### 4. Provide a basis for further data collection through surveys or experiments
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+✔ The IQR method seemed the most appropriate for this dataset, since it is straight forward to
+implement for a preliminary diagnostic of the Engine.
+✔ If if the Shipping company would prefer to fine-tune the analysis with smaller or larger proportions of samples, then Isolation Forest
+would be the recommendation (more flexible than IQR).
+✔ The selection of Isolation Forest (I.F.) vs. OC-SVM was based on lower complexity to implement (parameter tuning) and
+because I.F. identified more common points with IQR than OC-SVM. This means more samples
+with multi-feature outliers could be picked-up in comparison to OC-SVM. 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
