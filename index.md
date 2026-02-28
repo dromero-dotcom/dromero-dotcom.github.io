@@ -4,7 +4,7 @@
 
 ### Time Series Analysis and Forecasting
 
-[Project: Forecasting Sales for a Bookshop](/proj4_BookshopFcst)
+[Project: Forecasting Book Sales for small/medium Publishers](/proj4_BookshopFcst)
 <img src="images/proj4/sales_fcst.JPG?raw=true"/>
 
 ---
@@ -23,7 +23,7 @@
 
 ---
 
-[Project: Detection of anomalous activity on a Ship's Engine](/proj1_ShipEngine)
+[Project: Anomalous activity detection on a Ship's Engine](/proj1_ShipEngine)
 <img src="images/proj1/cargoship.JPG?raw=true"/>
 
 ---
