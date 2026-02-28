@@ -11,19 +11,11 @@ frequency, spend value, etc.), the client could design different marketing campa
 The initial dataset contained 951,669 records, with 20 columns (features). It was necessary to pre-process it (aggregate data) for the
 analysis. There were 5 features considered relevant for creating meaningful clusters:
 
-● A. Frequency: How often a customer buys over a given period.
-
-
-● B. Recency: How recently a customer made a purchase or placed an order.
-
-
-● C. Customer-Lifetime-Value (CLV): Total value (revenue) a customer contributes.
-
-
-● D. Average Unit Cost: Indicates if a customer prefers high- or low-value items (on average).
-
-
-● E. Customer Age.
+* A. Frequency: How often a customer buys over a given period.
+* B. Recency: How recently a customer made a purchase or placed an order.
+* C. Customer-Lifetime-Value (CLV): Total value (revenue) a customer contributes.
+* D. Average Unit Cost: Indicates if a customer prefers high- or low-value items (on average).
+* E. Customer Age.
 
 
 Boxplots of the processed dataset revealed outliers in 4 of the 5 features (not with customer age).
@@ -47,6 +39,7 @@ Three methods were used to estimate the "ideal" number of clusters to apply, bel
 
 
 Below is the dendrogram from the hierarchical approach:
+
 <img src="images/proj2/dendrogram.png?raw=true"/>
 
 Based on these overlapping numbers, the "optimal" number chosen was k=5 clusters (deciding factor was the highest average value of the Silhoutte score).
