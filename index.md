@@ -31,6 +31,6 @@
 ### NLP Chatbot Prototyping and UX
 
 [MSc Project (Dissertation): Design a 'Feminist' Chatbot and evaluate for UX](/proj0_Chatbot)
-<img src="images/proj0/Chatbot1.jpg?raw=true"/>
+<img src="images/proj0/Chatbot1.JPG?raw=true"/>
 
 ---
