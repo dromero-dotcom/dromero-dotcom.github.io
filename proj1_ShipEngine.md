@@ -34,10 +34,13 @@ Outcome: number of anomalies (outliers) common to all 3 methods, summarised in t
 
 ✔ The IQR method seemed the most appropriate for this dataset, since it is straight forward to
 implement for a preliminary diagnostic of the Engine.
+
 ✔ If if the Shipping company would prefer to fine-tune the analysis with smaller or larger proportions of samples, then Isolation Forest
 would be the recommendation (more flexible than IQR).
+
 ✔ The selection of Isolation Forest (I.F.) vs. OC-SVM was based on lower complexity to implement (parameter tuning) and
 because I.F. identified more common points with IQR than OC-SVM. This means more samples
-with multi-feature outliers could be picked-up in comparison to OC-SVM. 
+with multi-feature outliers could be picked-up in comparison to OC-SVM.
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
