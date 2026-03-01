@@ -30,7 +30,7 @@ This multi-staged analytical framework was employed to process the data and extr
 <img src="images/proj3/Emotions_Distribution.png?raw=true"/>
 
 * Deep-dive into "angry" reviews: BERTopic was then applied to this subset of reviews to understand specific drivers of high-intensity dissatisfaction.
-* Topic Modelling using a Large-Language-Model (LLM): Loaded the Phi-4 model from Hugging Face. A prompt was utilized to extract top 3 topics from the dataset (Top-30 locations).
+* Topic Modelling using a Large-Language-Model (LLM): Loaded the Phi-4 model from Hugging Face. A prompt was utilized to extract top 3 topics from the dataset (Top-30 locations), which generated a hierarchical view of clusters (see below)
   <img src="images/proj3/Bertopic_LLM_Dendrogram.png?raw=true"/>
   
 * Latent Dirichlet Allocation (LDA) Model: used this to perform topic modelling on the negative reviews (all locations) to provide a comparative baseline, below a cluster example.
@@ -43,6 +43,7 @@ This multi-staged analytical framework was employed to process the data and extr
 
 ### 3. Results and Recommendations
 A map showing the top 20 sites with highest number of negative reviews was generated, so these could be prioritised for further investigation and targeted action. 
+The relative size of each site "marker" was proportional to the number of negative reviews (i.e. the bigger the circle the more negatives).
 For data protection reasons, the actual map is not shown here, but an example (unrelated) of the visualisation is below:
 <img src="images/proj3/MapExample.jpg?raw=true"/>
 
