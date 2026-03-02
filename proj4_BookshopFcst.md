@@ -20,18 +20,18 @@ For the study, the focus was on volume, i.e. to predict how many units would be 
 It is important to mention there were three COVID-19 lockdowns in the UK in 2020 and 2021, when no physical sales took place. These "shocks" had a significant impact on the
 patterns seen until then and thus influenced the structure of the data.
 
-Asa proof-of-concept, the study focused on analyising sales of two books in different genres:
-* "The Alchemist" (by P. Coehlo, adult, non-fiction)
+As a proof-of-concept, the study focused on analyising sales of two books in different genres:
+* "The Alchemist" (by P. Coehlo, adult-fiction)
 * "The Very Hungry Caterpillar" (by E. Carle, Children's)
 
-For the study, various models were trained on data from 2012 to 2023, then predictions obtained for the last 32 weeks, which were then assessed vs. the actuals in a "Test" subset. 
+For the study, various models were trained on data from 2012 to 2023, then predictions obtained for the last 32 weeks, which were evaluated vs. actuals. 
 
 ---
 
 ### 2. Methodology
 
 The aim was to produce reasonable sales forecasts for each book separately. The approach was this:
-* Data Preparation: extracted datasets and separated into training/testing (see below).
+* Data Preparation: extracted data for each book and separated into training/testing (see below).
 
 <img src="images/proj4/Train_Test.png?raw=true"/>
 
@@ -39,14 +39,13 @@ The aim was to produce reasonable sales forecasts for each book separately. The 
 <img src="images/proj4/STL_Decomposition.png?raw=true"/>
 
 * ACF, PACF and Stationarity: checked time-series stationarity assumptions.
-* Auto-ARIMA: used the Pmdarima lybrary in Python to obtain the “best-fit” model (SARIMA); generated forecasts and compared vs. actuals.
+* Auto-ARIMA: used the Pmdarima library in Python to obtain the “best-fit” model (SARIMA); generated forecasts and compared vs. actuals.
 
 <img src="images/proj4/SARIMA_Alchem.png?raw=true"/>
 
 * XGBoost: created a XGBRegressor model, then generated forecasts and compared vs. actuals.
 * LSTM: defined and trained a "baseline" stacked multi-step model, then used “KerasTuner” for hyperparameter tuning. Generated forecasts and compared vs. actuals.
-* Hybrid: used the SARIMA model for volume predictions and combined with LSTM to model the residuals, then combined both to get a hybrid model and make predictions.
-predictions of residuals, then compared total forecasts vs. actuals.
+* Hybrid: used SARIMA to predict trend and seasonality; LSTM to model and predict residuals. The hybrid predictions were then compared to actuals.
 * Monthly Modelling: explored the option of aggregating weekly figures into monthly, then developed XGBoost and SARIMA models to compare vs actuals and vs. the weekly models.
 
 
@@ -54,18 +53,18 @@ predictions of residuals, then compared total forecasts vs. actuals.
 
 ### 3. Results and Recommendations
 
-To compare predictions vs. actuals, two key metrics were used: Mean Absolute Error (MAE) and Mean Percentage Absolute Error (MAPE).
+To compare forecasts vs. actuals, two key metrics were used: Mean Absolute Error (MAE) and Mean Percentage Absolute Error (MAPE).
 MAE is relevant when comparing models using the weekly data. For comparisons between weekly and monthly, using MAPE makes more sense.
 Overall, the weekly predictions had better performance than the monthly ones, below a summary (only comparing XGBoost and SARIMA):
 
 <img src="images/proj4/Metrics.png?raw=true"/>
 
-Among the weekly models, for "The Alchemist" the best performance was with XGBoost (MAE: 118.8, MAPE:0.19),
-whereas for "The Caterpillar" the SARIMA model performed best (MAE: 357.8 , MAPE:0.19).
+Among the weekly models, for "The Alchemist" the best performance was with XGBoost (MAE: 118.8, MAPE: 0.19),
+whereas for "The Caterpillar" the SARIMA model performed best (MAE: 357.8 , MAPE: 0.19).
 
 Time series plots showing the predictions with a 95% confidence interval for each book are illustrated below.
 
-<img src="images/proj4/Final_Alchem_XGB.png?raw=true"/>
+<img src="images/proj4/Final_Alchem_XBG.png?raw=true"/>
 <img src="images/proj4/Final_Caterpillar_SARIMA.png?raw=true"/>
 
 
