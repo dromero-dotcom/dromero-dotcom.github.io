@@ -1,10 +1,30 @@
-## PROJECT: Detecting anomalous activity of a ship's engine
+## PROJECT: Create a "Feminist" Chatbot - MSc Dissertation
 
-**Project description / Problem Statement:** A logistics company operates a fleet of ships. It needs an anomaly detection system for their fleet to prevent engine failures. Maintenance issues can cause safety risks, high costs, and delivery delays. By analyzing engine sensor data for early warnings, the goal is to implement proactive monitoring that ensures crew safety, reduces operational expenses, and protects revenue through timely corrective action.
+**Project description:** Interest in conversational agents (e.g. Amazon Alexa) and chatbots has increased significantly 
+during recent years, motivated mainly by commercial benefits. However, with this rapid 
+expansion, Artificial Intelligence (AI)-driven applications have also generated problems, some of them 
+linked to gender bias and stereotypes detrimental to women. 
+Despite years of progress made by Feminism since the 19th century, gender equality in many areas 
+remains elusive. One of the most challenging issues concerns sexism in the workplace and in particular 
+income inequality, also known as the gender pay gap (GPG). 
+This MSc research project explored these topics. From the technical side, some of the latest AI and Machine 
+Learning (ML) techniques were applied to create a prototype “Feminist Chatbot” called ABIE (Adviser 
+for Better Income Equality). This meant that “Feminist Design Principles” guided the chatbot 
+development, including a self-defence mechanism against sexist verbal abuse. The main purpose of the 
+prototype was to increase awareness of the gender pay gap and to provide salary negotiation tips, 
+especially for women. 
+
+
+**NOTE:** this project was develpoed as part of an MSc in Computer Science at the University of Warwick (UK), completed in September 2021.
+Nowadays more advanced chatbots have become widely established, after the initial release of ChatGPT in November 2022. While this project 
+now might seem "behind the curve" in technical terms, the topics about bias in AI and the design principles remain valid even today.
+More significantly, some of the fundamental architectural foundations (e.g. Transformers and NLP) also form part of the advanced AI-Chatbots.
+It is also a matter of scale: vast amounts of data were used to train the models behind the advanced chatbots.
+In contrast, for this preject a very small training dataset was used.
 
 ---
 
-### 1. Exploratory Data Analysis
+### 1. Initial Research
 
 A dataset of about 19,500 readings was used to track various features of the engine activity: engine RPMs, oil temperature and pressure, fuel pressure, etc. Each on its own does not point to an anomaly, but combinations of several abnormal readings might suggest potential issues. Histograms and boxplots of each feature helped to identify the distribution of the data and potential outliers. 
 
@@ -15,32 +35,32 @@ A dataset of about 19,500 readings was used to track various features of the eng
 
 ### 2. Methodology
 
-Three methods were used to pinpoint outliers:
-* Interquartile Range (IQR).
-* One-Class Support Vector Machine (OC-SVM).
-* Isolation Forest.
-
-Principal Component Analysis (PCA) was used to reduce the dimensionality of the dataset and plot the various data points in 2D.
-
-<img src="images/proj1/3_scatterplots_comparison.png?raw=true"/>
+* Open source software was used to develop the chatbot, including Python and the development framework: Rasa (for rapid prototyping). 
+* Natural Language Processing (NLP) capabilities were covered using the Transformer architecture, combined with the spaCy API.
+* After cross-validation testing, the intial model average F1-Score of 0.928 for user intent classification. 
+* Subsequently the chatbot (named "ABIE") was deployed to a cloud server using the Google Cloud Platform (GCP) to 
+carry out a formative study.
+* This was a small-scale academic study, so in total eleven test users (42% response rate) took part.
+* Users were spread across various locations: the UK, Mexico and Singapore.
+* The users were asked to interact with ABIE and afterwards complete an online survey to assess usability and user experience (UX).
+  
 
 ---
 
-### 3. Results and Recommendations
+### 3. Results and Conclusion
 
-The number of anomalies (outliers) common to all 3 methods, is summarised in the table underneath:
+Results from the online survey:
+* For **Usability**, the System Usability Scale (SUS) methodology was applied, resulting in a raw score of 67 (47% percentile rank), which was just under 
+the industry benchmark of 68 for average usability (50% percentile).
+* Due to small sample size and outliers, this result is merely indicative but already a good starting point for further development.
+* The Short **User Experience** Questionnaire (UEQ-S) was integrated in the survey to evaluate UX.
+* Participants judged the experience of chatting to ABIE as “positive” (UEQ-S score of 0.83), indicating it is already at a decent level of UX when compared to other benchmarks.
+* Furthermore, the verbal abuse defense-mechanism was judged as “good” or “satisfactory” by a majority of users. 
 
-<img src="images/proj1/Anomalies.png?raw=true"/>
+These results illustrate how careful design and planning can ensure AI applications avoid spreading 
+bias and harmful stereotypes. Moreover, such applications can also play an active role in advancing 
+important social and ethical considerations, such as those related to gender equality.
 
-✔ The IQR method seemed the most appropriate for this dataset, since it is straight forward to
-implement for a preliminary diagnostic of the Engine.
-
-✔ If the Shipping company would prefer to fine-tune the analysis with smaller or larger proportions of samples, then Isolation Forest
-would be the recommendation (more flexible than IQR).
-
-✔ The selection of Isolation Forest (I.F.) vs. OC-SVM was based on lower complexity to implement (parameter tuning) and
-because I.F. identified more common points with IQR than OC-SVM. This means more samples
-with multi-feature outliers could be picked-up in comparison to OC-SVM.
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
