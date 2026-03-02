@@ -31,22 +31,22 @@ For the study, various models were trained on data from 2012 to 2023, then predi
 ### 2. Methodology
 
 The aim was to produce reasonable sales forecasts for each book separately. The approach was this:
-* Data Preparation: extracted data for each book and separated into training/testing (see below).
+* **Data Preparation**: extracted data for each book and separated into training/testing (see below).
 
 <img src="images/proj4/Train_Test.png?raw=true"/>
 
-* Series Decomposition: used STL to assess trend, seasonality and residuals:
+* **Series Decomposition**: used STL to assess trend, seasonality and residuals:
 <img src="images/proj4/STL_Decomposition.png?raw=true"/>
 
-* ACF, PACF and Stationarity: checked time-series stationarity assumptions.
-* Auto-ARIMA: used the Pmdarima library in Python to obtain the “best-fit” model (SARIMA); generated forecasts and compared vs. actuals.
+* **ACF, PACF and Stationarity**: checked time-series stationarity assumptions.
+* **Auto-ARIMA**: used the Pmdarima library in Python to obtain the “best-fit” model (SARIMA); generated forecasts and compared vs. actuals.
 
 <img src="images/proj4/SARIMA_Alchem.png?raw=true"/>
 
-* XGBoost: created a XGBRegressor model, then generated forecasts and compared vs. actuals.
-* LSTM: defined and trained a "baseline" stacked multi-step model, then used “KerasTuner” for hyperparameter tuning. Generated forecasts and compared vs. actuals.
-* Hybrid: used SARIMA to predict trend and seasonality; LSTM to model and predict residuals. The hybrid predictions were then compared to actuals.
-* Monthly Modelling: explored the option of aggregating weekly figures into monthly, then developed XGBoost and SARIMA models to compare vs actuals and vs. the weekly models.
+* **XGBoost**: created a XGBRegressor model, then generated forecasts and compared vs. actuals.
+* **LSTM**: defined and trained a "baseline" stacked multi-step model, then used “KerasTuner” for hyperparameter tuning. Generated forecasts and compared vs. actuals.
+* **Hybrid**: used SARIMA to predict trend and seasonality; LSTM to model and predict residuals. The hybrid predictions were then compared to actuals.
+* **Monthly Modelling**: explored the option of aggregating weekly figures into monthly, then developed XGBoost and SARIMA models to compare vs actuals and vs. the weekly models.
 
 
 ---
