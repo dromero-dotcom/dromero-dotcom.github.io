@@ -17,6 +17,8 @@ For the study, the focus was on volume, i.e. to predict how many units would be 
 
 <img src="images/proj4/AllSales.png?raw=true"/>
 
+It is important to mention there were three COVID-19 lockdowns in the UK in 2020 and 2021, when no physical sales took place. These "shocks" had a significant impact on the
+patterns seen until then and thus influenced the structure of the data.
 
 Asa proof-of-concept, the study focused on analyising sales of two books in different genres:
 * "The Alchemist" (by P. Coehlo, adult, non-fiction)
@@ -52,13 +54,32 @@ predictions of residuals, then compared total forecasts vs. actuals.
 
 ### 3. Results and Recommendations
 
-Outcome: number of anomalies (outliers) common to all 3 methods, summarised in this table:
+To compare predictions vs. actuals, two key metrics were used: Mean Absolute Error (MAE) and Mean Percentage Absolute Error (MAPE).
+MAE is relevant when comparing models using the weekly data. For comparisons between weekly and monthly, using MAPE makes more sense.
+Overall, the weekly predictions had better performance than the monthly ones, below a summary (only comparing XGBoost and SARIMA):
 
-<img src="images/proj1/Anomalies.png?raw=true"/>
+<img src="images/proj4/Metrics.png?raw=true"/>
+
+Among the weekly models, for "The Alchemist" the best performance was with XGBoost (MAE: 118.8, MAPE:0.19),
+whereas for "The Caterpillar" the SARIMA model performed best (MAE: 357.8 , MAPE:0.19).
+
+Time series plots showing the predictions with a 95% confidence interval for each book are illustrated below.
+
+<img src="images/proj4/Final_Alchem_XGB.png?raw=true"/>
+<img src="images/proj4/Final_Caterpillar_SARIMA.png?raw=true"/>
 
 
-### 4. Provide a basis for further data collection through surveys or experiments
+Practical recommendations for small-medium independent publishers:
+* **1. Keep Weekly Level**: Monthly aggregation does not improve accuracy. From a business perspective, weekly forecasting
+offers better flexibility for inventory management and reduces the financial risks associated with
+committing to month-long stock levels
+* **2. Be flexible and ready to adapt**: Different target audiences create distinct book sales profiles.
+Because model performance varied significantly, publishers should adapt their forecasting techniques to the specific dataset
+rather than applying a universal solution.
+* **3. High accuracy with real-life data is a challenge**: External shocks, such as COVID-19 lockdowns, demonstrate how easily models can be disrupted.
+With an estimated error of approximately 19%, clients must account for this margin of uncertainty and recalibrate regularly to correct for deviations.
+* **4. Benefit from a strong starting point**: While not perfect, these models provide a good starting point for anticipating volatility and seasonal trends.
+These models allow publishers to draft preliminary strategies tailored to specific book genres, while remaining mindful of inherent market risks
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
