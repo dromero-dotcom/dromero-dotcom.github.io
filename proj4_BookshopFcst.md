@@ -21,7 +21,7 @@ It is important to mention there were three COVID-19 lockdowns in the UK in 2020
 patterns seen until then and thus influenced the structure of the data.
 
 As a proof-of-concept, the study focused on analyising sales of two books in different genres:
-* "The Alchemist" (by P. Coehlo, adult-fiction)
+* "The Alchemist" (by P. Coelho, adult-fiction)
 * "The Very Hungry Caterpillar" (by E. Carle, Children's)
 
 For the study, various models were trained on data from 2012 to 2023, then predictions obtained for the last 32 weeks, which were evaluated vs. actuals. 
