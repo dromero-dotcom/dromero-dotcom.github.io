@@ -30,15 +30,25 @@ Moreover, some of the fundamental architectural blocks (e.g. Transformers) still
 
 ### 2. Methodology
 
+* Designed the fundamental components of the chatbot, including a basic conversation flow ("happy path"):
+
+<img src="images/proj0/ConversationDesign.jpg?raw=true"/>
+  
 * Open source software was used to develop the chatbot, including Python and the development framework: RASA (for rapid prototyping). 
 * Natural Language Processing (NLP) capabilities were covered using the Transformer architecture, combined with the spaCy API.
 * After cross-validation testing, the intial model average F1-Score of 0.928 for user intent classification. 
-* Subsequently the chatbot (named "ABIE") was deployed to a cloud server using the Google Cloud Platform (GCP) to 
+* Subsequently the chatbot ("ABIE") was deployed to the cloud using the Google Cloud Platform (GCP) to 
 carry out a formative study.
+* Example of a "test interaction" with ABIE on the cloud:
+
+<img src="images/proj0/conversation_example.jpg?raw=true"/> 
+
 * This was a small-scale academic study, so in total eleven test users (42% response rate) took part.
 * Users were spread across various locations: the UK, Mexico and Singapore.
-* The users were asked to interact with ABIE and afterwards complete an online survey to assess usability and user experience (UX).
-  
+* The users were asked to interact with ABIE (using WhatsApp) and afterwards complete an online survey to assess usability and user experience (UX):
+
+<img src="images/proj0/WhatsApp_Msg.jpg?raw=true"/>
+<img src="images/proj0/SurveyView.jpg?raw=true"/> 
 
 ---
 
@@ -49,7 +59,10 @@ Results from the online survey:
 the industry benchmark of 68 for average usability (50% percentile).
 * Due to small sample size and outliers, this result is merely indicative but already a good starting point for further development.
 * The Short **User Experience Questionnaire** (UEQ-S) was integrated in the survey to evaluate UX.
-* Participants judged the experience of chatting to ABIE as “positive” (UEQ-S score of 0.83), indicating it is already at a decent level of UX when compared to other benchmarks.
+* Participants judged the experience of chatting to ABIE as “positive” (UEQ-S score of 0.83), indicating it is already at a decent level of UX when compared to other benchmarks:
+
+  <img src="images/proj0/UEQ-s.jpg?raw=true"/>
+  
 * Furthermore, the verbal abuse defense-mechanism was judged as “good” or “satisfactory” by a majority of users. 
 
 These results illustrate how careful design and planning can ensure AI applications avoid spreading 
