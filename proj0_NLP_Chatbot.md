@@ -7,7 +7,7 @@ This MSc research project explored these topics. From the technical side, some o
 Learning (ML) techniques were applied to create a prototype “Feminist Chatbot” called ABIE (Adviser 
 for Better Income Equality). 
 This meant that “Feminist Design Principles” guided the chatbot 
-development. The main purpose of the chatbot was to increase awareness of the gender pay gap and test usability and UX. 
+development. The main purpose of the chatbot was to increase awareness of the gender pay gap. 
 
 
 **NOTE:** this project was developed as part of an MSc in Computer Science at the University of Warwick (UK), completed in September 2021.
@@ -19,10 +19,10 @@ Moreover, some of the fundamental architectural blocks (e.g. Transformers) still
 
 ### 1. Initial Research:
 * Researched development of chatbots from early stages (ELIZA, PARRY) to more recent examples (IKEA chatbot, Siri, etc).
-* Discovered reported problems with bias and detrimental gender stereotypes embedded in chatbots.
-* Investigated the latest developments in AI and Machine Learning to use with chatbots, e.g. the Transformer architecture (also used for ChatGPT).
+* Conducted literature research to identify main problems with bias and detrimental gender stereotypes embedded in chatbots.
+* Investigated the latest developments in AI and Machine Learning to use with chatbots, e.g. NLP and the Transformer architecture.
 * Explored different frameworks for chatbot rapid-prototyping, e.g. RASA. 
-* Agreed the requirements for the application using the MoSCOw prioritisation technique.
+* Agreed the requirements for the application using the MoSCow prioritisation technique.
 * Selected the most relevant tools for assessing Usability and UX.
  
 
@@ -45,10 +45,10 @@ carry out a formative study.
 ### 3. Results and Conclusion
 
 Results from the online survey:
-* For **Usability**, the System Usability Scale (SUS) methodology was applied, resulting in a raw score of 67 (47% percentile rank), which was just under 
+* For **Usability**: the System Usability Scale (SUS) methodology was applied, resulting in a score of 67 (47% percentile rank), which was just under 
 the industry benchmark of 68 for average usability (50% percentile).
 * Due to small sample size and outliers, this result is merely indicative but already a good starting point for further development.
-* The Short **User Experience** Questionnaire (UEQ-S) was integrated in the survey to evaluate UX.
+* The Short **User Experience Questionnaire** (UEQ-S) was integrated in the survey to evaluate UX.
 * Participants judged the experience of chatting to ABIE as “positive” (UEQ-S score of 0.83), indicating it is already at a decent level of UX when compared to other benchmarks.
 * Furthermore, the verbal abuse defense-mechanism was judged as “good” or “satisfactory” by a majority of users. 
 
