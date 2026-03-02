@@ -1,40 +1,36 @@
 ## PROJECT: Create a "Feminist" Chatbot - MSc Dissertation
 
 **Project description:** Interest in conversational agents (e.g. Amazon Alexa) and chatbots has increased significantly 
-during recent years, motivated mainly by commercial benefits. However, with this rapid 
-expansion, Artificial Intelligence (AI)-driven applications have also generated problems, some of them 
-linked to gender bias and stereotypes detrimental to women. 
-Despite years of progress made by Feminism since the 19th century, gender equality in many areas 
-remains elusive. One of the most challenging issues concerns sexism in the workplace and in particular 
-income inequality, also known as the gender pay gap (GPG). 
+recently. However, with this rapid expansion, AI-driven applications have also generated problems, some of them 
+linked to gender bias and detrimental stereotypes. 
 This MSc research project explored these topics. From the technical side, some of the latest AI and Machine 
 Learning (ML) techniques were applied to create a prototype “Feminist Chatbot” called ABIE (Adviser 
-for Better Income Equality). This meant that “Feminist Design Principles” guided the chatbot 
-development, including a self-defence mechanism against sexist verbal abuse. The main purpose of the 
-prototype was to increase awareness of the gender pay gap and to provide salary negotiation tips, 
-especially for women. 
+for Better Income Equality). 
+This meant that “Feminist Design Principles” guided the chatbot 
+development. The main purpose of the chatbot was to increase awareness of the gender pay gap and test usability and UX. 
 
 
 **NOTE:** this project was developed as part of an MSc in Computer Science at the University of Warwick (UK), completed in September 2021.
-Nowadays more advanced chatbots have become widely established, after the initial release of ChatGPT in November 2022. While this project 
-now might seem "behind the curve" in technical terms, the topics about bias in AI and the design principles remain valid even today.
-More significantly, some of the fundamental architectural blocks (e.g. Transformers) still play a role in more advanced chatbots.
-Furthermore, while vast amounts of data were used to train the models behind advanced chatbots, this project used a very small training set.
+Nowadays more advanced chatbots have become widely established, after the initial release of ChatGPT in November 2022.
+While this now might seem technically "behind the curve", the topics about bias in AI and fair design principles remain valid today.
+Moreover, some of the fundamental architectural blocks (e.g. Transformers) still play a role in more advanced chatbots.
 
 ---
 
-### 1. Initial Research
-
-A dataset of about 19,500 readings was used to track various features of the engine activity: engine RPMs, oil temperature and pressure, fuel pressure, etc. Each on its own does not point to an anomaly, but combinations of several abnormal readings might suggest potential issues. Histograms and boxplots of each feature helped to identify the distribution of the data and potential outliers. 
-
-<img src="images/proj1/histograms2.png?raw=true"/>
-<img src="images/proj1/boxplots.png?raw=true"/>
+### 1. Initial Research:
+* Researched development of chatbots from early stages (ELIZA, PARRY) to more recent examples (IKEA chatbot, Siri, etc).
+* Discovered reported problems with bias and detrimental gender stereotypes embedded in chatbots.
+* Investigated the latest developments in AI and Machine Learning to use with chatbots, e.g. the Transformer architecture (also used for ChatGPT).
+* Explored different frameworks for chatbot rapid-prototyping, e.g. RASA. 
+* Agreed the requirements for the application using the MoSCOw prioritisation technique.
+* Selected the most relevant tools for assessing Usability and UX.
+ 
 
 ---
 
 ### 2. Methodology
 
-* Open source software was used to develop the chatbot, including Python and the development framework: Rasa (for rapid prototyping). 
+* Open source software was used to develop the chatbot, including Python and the development framework: RASA (for rapid prototyping). 
 * Natural Language Processing (NLP) capabilities were covered using the Transformer architecture, combined with the spaCy API.
 * After cross-validation testing, the intial model average F1-Score of 0.928 for user intent classification. 
 * Subsequently the chatbot (named "ABIE") was deployed to a cloud server using the Google Cloud Platform (GCP) to 
