@@ -15,12 +15,11 @@ prototype was to increase awareness of the gender pay gap and to provide salary 
 especially for women. 
 
 
-**NOTE:** this project was develpoed as part of an MSc in Computer Science at the University of Warwick (UK), completed in September 2021.
+**NOTE:** this project was developed as part of an MSc in Computer Science at the University of Warwick (UK), completed in September 2021.
 Nowadays more advanced chatbots have become widely established, after the initial release of ChatGPT in November 2022. While this project 
 now might seem "behind the curve" in technical terms, the topics about bias in AI and the design principles remain valid even today.
-More significantly, some of the fundamental architectural foundations (e.g. Transformers and NLP) also form part of the advanced AI-Chatbots.
-It is also a matter of scale: vast amounts of data were used to train the models behind the advanced chatbots.
-In contrast, for this preject a very small training dataset was used.
+More significantly, some of the fundamental architectural blocks (e.g. Transformers) still play a role in more advanced chatbots.
+Furthermore, while vast amounts of data were used to train the models behind advanced chatbots, this project used a very small training set.
 
 ---
 
