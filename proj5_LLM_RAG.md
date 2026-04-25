@@ -1,49 +1,44 @@
 ## PROJECT: Forecasting Book Sales for Independent Publishers
 
-**Project description / Problem Statement:** Small to medium-sized independent publishers face significant financial risk due to high upfront costs
-and unpredictable book lifespans. Unlike larger companies, these publishers lack the infrastructure to
-leverage large-scale transactional data for strategic planning and forecasting. A market research agency specialising in tracking book sales
-aims to develop a data-driven service that utilizes historical sales patterns and
-seasonal trends. The goal is to provide actionable insights into long-term sales and economic life span,
-enabling publishers to optimize their decision-making process.
+**Project description / Problem Statement:** A Public Healthcare Organisation faces critical inefficiencies in defining clinical code sets (i.e. using SNOMED Codes). These lists are used to identify patient cohorts for research studies, aimed at establishing the effectiveness and benefits of new medical treatments. Currently, experts must manually extract data from multiple unstructured sources like spreadsheets, a labour-intensive process prone to subjectivity—especially regarding complex co-morbidities.
+
+To modernize, the Organisation seeks an automated, AI-supported framework focused on four pillars:
+* **Operational Efficiency:** Using AI/NLP to automate extraction from diverse sources.
+* **Quality & Impact:** Ensuring "good" coverage of relevant codes, while mitigating the risks of misclassification.
+* **Trust & Auditability:** Creating transparent "audit trails" for human review, also avoiding LLM "hallucinations" and ensuring explainable, chain-of-thought (CoT).
+* **Governance:** Managing accountability for AI errors and "code drift", i.e. when data sources evolve (new versions).  
+
+Ultimately, the goal is to automate technical "heavy lifting" done by analysts, while preserving clinical nuance and explainable AI output.
 
 ---
 
 ### 1. Exploratory Data Analysis
 
-The full dataset included UK weekly sales for several types of books, from January 2001 to July 2024. It included figures in volume (units sold) and value (in GBP).
-The agency monitors physical, print book sales (not ebooks or audiobooks) via electronic point-of-sale systems, so online transactions are excluded.
-For the study, the focus was on volume, i.e. to predict how many units would be sold at a given week. With the increase in online shopping, there has been a clear downward trend in physical sales:
-
-<img src="images/proj4/AllSales.png?raw=true"/>
-
-It is important to mention there were three COVID-19 lockdowns in the UK in 2020 and 2021, when no physical sales took place. These "shocks" had a significant impact on the
-patterns seen until then and thus influenced the structure of the data.
-
-As a proof-of-concept, the study focused on analyising sales of two books in different genres:
-* "The Alchemist" (by P. Coelho, adult-fiction)
-* "The Very Hungry Caterpillar" (by E. Carle, Children's)
-
-For the study, various models were trained on data from 2012 to 2023, then predictions obtained for the last 32 weeks, which were evaluated vs. actuals. 
+The intial dataset included almost 24,000 records (SNOMED Codes, with descriptions), taken from the NHS England website: Quality of Outcomes Framework Business Rules (QOF, version 49, 2024).
 
 ---
 
-### 2. Methodology
+### 2. Methodology: LLM with Vector Database
 
 The aim was to produce reasonable sales forecasts for each book separately. The approach was this:
-* **Data Preparation**: extracted data for each book and separated into training/testing (see below).
+* **Solution Architecture**: Initial suggestion described in tutorial in Real python:
 
-<img src="images/proj4/Train_Test.png?raw=true"/>
+<img src="images/proj5/ChromaDB_Cartoon.jpg?raw=true"/>
 
-* **Series Decomposition**: used STL to assess trend, seasonality and residuals:
-<img src="images/proj4/STL_Decomposition.png?raw=true"/>
+Architecture adapted to this specific employer project:
 
-* **ACF, PACF and Stationarity**: checked time-series stationarity assumptions.
-* **Auto-ARIMA**: used the Pmdarima library in Python to obtain the “best-fit” model (SARIMA); generated forecasts and compared vs. actuals.
+<img src="images/proj5/RAG-Flowchart.jpg?raw=true"/>
 
-<img src="images/proj4/SARIMA_Alchem.png?raw=true"/>
 
-* **XGBoost**: created a XGBRegressor model, then generated forecasts and compared vs. actuals.
-* **LSTM**: defined and trained a "baseline" stacked multi-step model, then used “KerasTuner” for hyperparameter tuning. Generated forecasts and compared vs. actuals.
-* **Hybrid**: used SARIMA to predict trend and seasonality; LSTM to model and predict residuals. The hybrid predictions were then compared to actuals.
-* **Monthly Modelling**: explored the option of aggregating weekly figures into monthly, then developed XGBoost and SARIMA models to compare vs actuals and vs. the weekly models.
+
+### 3. Results: Sample Queries and Output
+This is an example of the output from the LLM query after retrieval from ChromaDB:
+
+<img src="images/proj5/Clinical_code_list.jpg?raw=true"/>
+
+### 4. One Step Beyond: Clinical Review Dashboard with Streamlit
+To enable audit trail and a human-in-the-loop review, a separate dashboard was set up using the 
+Streamlit Community Cloud to host this prototype. It takes as input, a text file (JSON) generated by the LLM
+directly from the dataframe shown in section 3 above.
+
+<img src="images/proj5/Audit_Trail_Dashboard.jpg?raw=true"/>
