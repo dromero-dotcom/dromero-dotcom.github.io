@@ -1,4 +1,4 @@
-## PROJECT: Forecasting Book Sales for Independent Publishers
+## PROJECT: Generation of Clinical Code Lists for a Healthcare Organisation
 
 **Project description / Problem Statement:** A Public Healthcare Organisation faces critical inefficiencies in defining clinical code sets (i.e. using SNOMED Codes). These lists are used to identify patient cohorts for research studies, aimed at establishing the effectiveness and benefits of new medical treatments. Currently, experts must manually extract data from multiple unstructured sources like spreadsheets, a labour-intensive process prone to subjectivity—especially regarding complex co-morbidities.
 
