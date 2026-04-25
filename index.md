@@ -1,4 +1,10 @@
 ## Data Science Project Portfolio
+---
+
+### LLM with Retrieval-Augmented Generation (RAG)
+
+[Project: Generation of Clinical Code Lists for a Healthcare Org.](/proj5_LLM_RAG)
+<img src="images/proj5/healthcare.JPG?raw=true"/>
 
 ---
 
