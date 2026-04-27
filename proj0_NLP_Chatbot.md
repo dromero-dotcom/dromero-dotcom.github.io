@@ -70,8 +70,5 @@ These results illustrate how careful design and planning can ensure AI applicati
 bias and harmful stereotypes. Moreover, such applications can also play an active role in advancing 
 important social and ethical considerations, such as those related to gender equality.
 
-
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 ---
 [BACK](/index.md)
