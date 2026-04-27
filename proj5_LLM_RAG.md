@@ -10,7 +10,7 @@ To modernize, the Organisation seeks an automated, AI-supported framework focuse
 
 Ultimately, the goal is to automate technical "heavy lifting" done by analysts, while preserving clinical nuance and explainable AI output.
 
-<img src="images/proj5/clinical_research.jpg?raw=true"/>
+<img src="images/proj5/Clinical_Research.JPG?raw=true"/>
 
 ---
 
