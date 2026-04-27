@@ -14,13 +14,25 @@ Ultimately, the goal is to automate technical "heavy lifting" done by analysts, 
 
 ### 1. Exploratory Data Analysis
 
-The intial dataset included almost 24,000 records (SNOMED Codes, with descriptions), taken from the NHS England website: Quality of Outcomes Framework Business Rules (QOF, version 49, 2024).
+The intial dataset included almost 24,000 records (SNOMED Codes, with descriptions), taken from the NHS England website: Quality of Outcomes Framework (QOF) - Business Rules (Version 49, 2024).
+
+* To implement this a **Bi-Encoder architecture** was used. The SNOMED descriptions were converted into "vector embeddings" (numerical representations of meaning).
+* First the `SentenceTransformer` class was loaded to implement the "all-MiniLM-L6-v2" model. This is one of the smallest pretrained models available, but it’s a great one to start with.
+* Eventually models aimed at medical terminology were tried. Two Clinical Sentence BERT (SBERT) models were assessed for comparison.
+* For a baseline comparison, only a small selection of codes from of the original dataset was extracted. Embeddings were calculated using the LM and stored in a dictionary.
+* A sample target query (e.g. "patients with Type 2 diabetes") was also embedded.
+* The embedded query was compared against the various SNOMED embeddings using **Cosine Similarity** as an indication of a "confidence score".
+* The intitial analysis showed high scores for codes clearly linked to type 2 diabetes, even when the spelling was different.
+
+To scale things up, it was necessary to implement a Vector Database, since the full dataset comprised almost 24,000 records.
 
 ---
 
 ### 2. Methodology: LLM with Vector Database
 
-The aim was to produce reasonable sales forecasts for each book separately. The approach was this:
+* Afterwards (next section) we use a Vector Database to store the vector embeddings and enable efficient query retrieval on a largere scale.
+
+* We will use **ChromaDB** since it is easy to implement and is especially useful for rapid-prototyping.The aim was to produce reasonable sales forecasts for each book separately. The approach was this:
 * **Solution Architecture**: Initial suggestion described in tutorial in Real python:
 
 <img src="images/proj5/ChromaDB_Cartoon.jpg?raw=true"/>
