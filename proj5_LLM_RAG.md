@@ -1,3 +1,4 @@
+[BACK](/index.md)
 ## PROJECT: Generation of Clinical Code Lists for a Healthcare Organisation
 
 **Project description / Problem Statement:** A Public Healthcare Organisation faces critical inefficiencies in defining clinical code sets (i.e. using SNOMED Codes). These lists are used to identify patient cohorts for research studies, aimed at establishing the effectiveness and benefits of new medical treatments. Currently, experts must manually extract data from multiple unstructured sources like spreadsheets, a labour-intensive process prone to subjectivity—especially regarding complex co-morbidities.
@@ -75,3 +76,5 @@ directly from the dataframe shown in section 3 above.
 * The POC also produces an "Audit Trail", which can be used to defend decisions after the creation and publication of code lists.
 * In summary, when fully deployed, this modular solution helps to increase efficiency, reduce human error and enhance accountability and traceability.
   
+---
+[BACK](/index.md)
