@@ -1,3 +1,4 @@
+[BACK](/index.md)
 ## PROJECT: Extracting insights from online Customer Reviews for a Fitness/Gym Business
 
 **Project description / Problem Statement:** A market leader in the fitness sector would like to keep its competitive edge by deeply understanding their club members' motivations and behaviours.
@@ -52,5 +53,5 @@ Based on all the insights from the analysis, a list of 10 actionable recommendat
 
 <img src="images/proj3/Recommendations.jpg?raw=true"/>
 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+---
+[BACK](/index.md)
