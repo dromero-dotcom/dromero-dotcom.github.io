@@ -42,8 +42,7 @@ Below a visual of the basic concept to implement RAG with Chroma Vector Database
 
 <img src="images/proj5/ChromaDB_Cartoon.jpg?raw=true"/>
 
-Source: 
-https://realpython.com/courses/vector-databases-embeddings-chromadb/
+Source: [Vector Databases and Embeddings with ChromaDB-Tutorial](https://realpython.com/courses/vector-databases-embeddings-chromadb/)
 
 An advantage of **ChromaDB** is its relatively simple implementation compared to other alternatives. Chroma is especially useful for rapid-prototyping.
  
