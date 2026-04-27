@@ -10,6 +10,8 @@ To modernize, the Organisation seeks an automated, AI-supported framework focuse
 
 Ultimately, the goal is to automate technical "heavy lifting" done by analysts, while preserving clinical nuance and explainable AI output.
 
+<img src="images/proj5/clinical_research.jpg?raw=true"/>
+
 ---
 
 ### 1. Exploratory Data Analysis
@@ -71,6 +73,6 @@ directly from the dataframe shown in section 3 above.
 * Likewise, the Streamlit Dashboard was used as a POC for rapid prototyping. A full-scale UI with proper hosting and authentication protocols would be required for production.
 * Nevertheless, as a POC this enables the client organisation to assess the posibilities (and limitations) of using AI for automated clinical code generation.
 * The benefist are multiple: analysts can save time and dedicate this to curate code lists more thoroughly in shorter time.
-* The POC also produces an "Audit Trail" model, which can be used to defend decisions after the creation and publication of code lists.
+* The POC also produces an "Audit Trail", which can be used to defend decisions after the creation and publication of code lists.
 * In summary, when fully deployed, this modular solution helps to increase efficiency, reduce human error and enhance accountability and traceability.
   
