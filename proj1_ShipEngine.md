@@ -1,3 +1,4 @@
+[BACK](/index.md)
 ## PROJECT: Detecting anomalous activity of a ship's engine
 
 **Project description / Problem Statement:** A logistics company operates a fleet of ships. It needs an anomaly detection system for their fleet to prevent engine failures. Maintenance issues can cause safety risks, high costs, and delivery delays. By analyzing engine sensor data for early warnings, the goal is to implement proactive monitoring that ensures crew safety, reduces operational expenses, and protects revenue through timely corrective action.
@@ -42,5 +43,5 @@ would be the recommendation (more flexible than IQR).
 because I.F. identified more common points with IQR than OC-SVM. This means more samples
 with multi-feature outliers could be picked-up in comparison to OC-SVM.
 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+---
+[BACK](/index.md)
