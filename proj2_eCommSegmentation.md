@@ -1,3 +1,4 @@
+[BACK](/index.md)
 ## PROJECT: Customer Segmentation for an e-Commerce Business
 
 **Project description / Problem Statement:** The client is an e-Commerce company who wants to understand various segments within its customer
@@ -56,5 +57,6 @@ The K-Means Clustering algorithm was then applied, and the results visualised in
 Based on the feature characteristics for each cluster, an overall description for each can be defined and is presented in the table below. The e-Commerce business could then tailor specific marketing campaigns to target each customer segment accordingly, e.g. specific advertising for high-end/high-value items for cluster 3, etc.
 
 <img src="images/proj2/Clusters_Table.jpg?raw=true"/>
- 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+ ---
+[BACK](/index.md)
