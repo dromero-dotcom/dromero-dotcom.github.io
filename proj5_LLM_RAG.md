@@ -30,14 +30,23 @@ To scale things up, it was necessary to implement a Vector Database, since the f
 
 ### 2. Methodology: LLM with Vector Database
 
-* Afterwards (next section) we use a Vector Database to store the vector embeddings and enable efficient query retrieval on a largere scale.
+Sometimes LLMs produce "hallucinations". Especially in the context of healthcare, this should be **avoided**. 
+To make the clinical code extraction more robust and scalable, the concept of Retrieval-Augmented Generation (RAG) was introduced. 
+By indexing the SNOMED codes and descriptions into a Vector Database (e.g., Qdrant, Weaviate or ChromaDB), the LLM can be instructed to produce a response only from the database
+and not from any unexplainable pre-trained knowledge.
 
-* We will use **ChromaDB** since it is easy to implement and is especially useful for rapid-prototyping.The aim was to produce reasonable sales forecasts for each book separately. The approach was this:
-* **Solution Architecture**: Initial suggestion described in tutorial in Real python:
+Furthermore, embedding SNOMED records this way enables fast and efficient query retrieval on a larger scale.
+Below a visual of the basic concept to implement RAG with Chroma Vector Database.
 
 <img src="images/proj5/ChromaDB_Cartoon.jpg?raw=true"/>
 
-Architecture adapted to this specific employer project:
+Source: 
+https://realpython.com/courses/vector-databases-embeddings-chromadb/
+
+An advantage of **ChromaDB** is its relatively simple implementation compared to other alternatives. Chroma is especially useful for rapid-prototyping.
+ 
+**Solution Architecture**: The original architecture proposed in the Real Python tutorial mentioned aboved was tailored to this project.
+The adapted architecture diagram is shown below:
 
 <img src="images/proj5/RAG-Flowchart.jpg?raw=true"/>
 
