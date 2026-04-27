@@ -53,7 +53,7 @@ The adapted architecture diagram is shown below:
 
 
 ### 3. Results: Sample Queries and Output
-This is an example of the output from the LLM query after retrieval from ChromaDB:
+Based on the query: "Patients with Type 2 diabetes", below is a short extract of the output from the LLM  after retrieval from ChromaDB:
 
 <img src="images/proj5/Clinical_code_list.jpg?raw=true"/>
 
@@ -63,3 +63,14 @@ Streamlit Community Cloud to host this prototype. It takes as input, a text file
 directly from the dataframe shown in section 3 above.
 
 <img src="images/proj5/Audit_Trail_Dashboard.jpg?raw=true"/>
+
+### 5. Conclusions and Recommendations
+* The project successfully demonstrated that a transformer-based semantic retrieval pipeline can automate the generation of clinical code sets from publicly available sources.
+* More importantly, the introduction of Retrieval-Augmented Generation (RAG) with ChromaDB should minimise the risk of irrelevant "hallucinations" from the LLM.
+* This was built using a modular approach. The client organisation could replace the LLM with another (e.g. more sophisticated) or with an alternative Vector Database.
+* Likewise, the Streamlit Dashboard was used as a POC for rapid prototyping. A full-scale UI with proper hosting and authentication protocols would be required for production.
+* Nevertheless, as a POC this enables the client organisation to assess the posibilities (and limitations) of using AI for automated clinical code generation.
+* The benefist are multiple: analysts can save time and dedicate this to curate code lists more thoroughly in shorter time.
+* The POC also produces an "Audit Trail" model, which can be used to defend decisions after the creation and publication of code lists.
+* In summary, when fully deployed, this modular solution helps to increase efficiency, reduce human error and enhance accountability and traceability.
+  
