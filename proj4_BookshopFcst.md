@@ -1,3 +1,4 @@
+[BACK](/index.md)
 ## PROJECT: Forecasting Book Sales for Independent Publishers
 
 **Project description / Problem Statement:** Small to medium-sized independent publishers face significant financial risk due to high upfront costs
@@ -80,5 +81,5 @@ With an estimated error of approximately 19%, clients must account for this marg
 * **4. Benefit from a strong starting point**: While not perfect, these models provide a good starting point for anticipating volatility and seasonal trends.
 These models allow publishers to draft preliminary strategies tailored to specific book genres, while remaining mindful of inherent market risks
 
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+---
+[BACK](/index.md)
